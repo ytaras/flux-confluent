@@ -18,8 +18,6 @@ spec:
     global:
       sasl:
         plain:
-            username: test_updated
-            password: test123_updated
     connect:
       replicas: 1
       enabled: true
@@ -31,8 +29,13 @@ spec:
             internal: true
             authentication:
               type: plain
-
-  # valuesFrom:
-  #   - kind: Secret
-  #     name: 
+  valuesFrom:
+    - kind: Secret
+      name: my-super-secret-data
+      valuesKey: username
+      targetPath: global.sasl.plain.username
+    - kind: Secret
+      name: my-super-secret-data
+      valuesKey: password
+      targetPath: global.sasl.plain.password
 
