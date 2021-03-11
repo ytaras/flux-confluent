@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   releaseName: confluent-connect
-  targetNamespace: confluent-operator
+  targetNamespace: confluent
   chart:
     spec:
       chart: ./helm/helm/confluent-operator
@@ -16,5 +16,7 @@ spec:
   interval: 1m0s
   values:
     kafka:
+      enabled: true
+    connect:
       enabled: true
 
