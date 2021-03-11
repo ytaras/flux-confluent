@@ -4,7 +4,7 @@ metadata:
   name: confluent-connect
   namespace: flux-system
 spec:
-  releaseName: confluent-operator
+  releaseName: connect
   targetNamespace: confluent-operator
   chart:
     spec:
