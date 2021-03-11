@@ -5,7 +5,7 @@ metadata:
   name: confluent-connect
   namespace: flux-system
 spec:
-  releaseName: confluent-connect
+  # releaseName: confluent-connect
   targetNamespace: confluent
   chart:
     spec:
@@ -15,8 +15,10 @@ spec:
         name: flux-system
   interval: 1m0s
   values:
-    kafka:
-      enabled: true
     connect:
+      replicas: 1
       enabled: true
+      dependencies:
+        kafka:
+          bootstrapEndpoint: pkc-419q3.us-east4.gcp.confluent.cloud:9092
 
