@@ -15,5 +15,4 @@ spec:
   interval: 1m0s
   values:
     operator:
-      enabled: 
-        true
+      enabled: true
