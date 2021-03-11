@@ -3,3 +3,9 @@ kind: Kustomization
 resources:
 - namespace.yaml
 - operator-release.yaml
+
+patches:
+  - target:
+      kind: HelmRelease
+      name: confluent-.*
+    path: docker-registry.yaml
