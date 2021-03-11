@@ -3,7 +3,6 @@ kind: Kustomization
 resources:
 - namespace.yaml
 - operator-release.yaml
-- connect-release.yaml
 
 patches:
   - target:
