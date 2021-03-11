@@ -15,6 +15,6 @@ spec:
         name: flux-system
   interval: 1m0s
   values:
-    connect:
+    operator:
       enabled: true
 
