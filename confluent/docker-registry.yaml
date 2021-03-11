@@ -2,14 +2,14 @@
   path: /spec/values/global
   value:
     provider:
-    name: private
-    ## if any name which indicates regions
-    ##
-    region: anyregion
-    ##
-    ## Docker registry endpoint where Confluent Images are available.
-    ##
-    registry:
-      fqdn: docker.io
-      credential:
-        required: false
+      name: private
+      ## if any name which indicates regions
+      ##
+      region: anyregion
+      ##
+      ## Docker registry endpoint where Confluent Images are available.
+      ##
+      registry:
+        fqdn: docker.io
+        credential:
+          required: false
