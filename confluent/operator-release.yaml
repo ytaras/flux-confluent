@@ -5,6 +5,7 @@ metadata:
   name: confluent-operator
   namespace: flux-system
 spec:
+  releaseName: confluent-operator
   targetNamespace: confluent
   chart:
     spec:
