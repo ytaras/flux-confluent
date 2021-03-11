@@ -10,3 +10,7 @@ patches:
       kind: HelmRelease
       name: confluent-.*
     path: docker-registry.yaml
+  - target:
+      kind: HelmRelease
+      name: confluent-.*
+    path: remediation.yaml

@@ -1,0 +1,5 @@
+- op: add
+  path: /spec/install
+  value:
+    remediation:
+      retries: 3
