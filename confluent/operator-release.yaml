@@ -17,3 +17,5 @@ spec:
   values:
     operator:
       enabled: true
+    global:
+      provider:
