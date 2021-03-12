@@ -39,4 +39,5 @@ spec:
       name: my-super-secret-data
       valuesKey: password
       targetPath: global.sasl.plain.password
-
+  dependsOn:
+    - name: connect-operator
