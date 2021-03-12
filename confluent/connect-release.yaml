@@ -19,6 +19,8 @@ spec:
     global:
       sasl:
         plain:
+          username: test_updates
+          password: test_password
     connect:
       replicas: 1
       enabled: true
@@ -47,6 +49,7 @@ spec:
     - kind: Secret
       name: my-super-secret-data
       valuesKey: password
-      targetPath: global.sasl.plain.password
+      targetPath: values.global.sasl.plain.password
+      optional: false
   dependsOn:
     - name: confluent-operator
