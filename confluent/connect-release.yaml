@@ -34,7 +34,16 @@ spec:
     - kind: Secret
       name: my-super-secret-data
       valuesKey: username
-      targetPath: global.sasl.plain.username
+      # targetPath: global.sasl.plain.username
+      targetPath: connect.dependencies.kafka.bootstrapEndpoint
+    - kind: Secret
+      name: my-super-secret-data
+      valuesKey: username
+      targetPath: connect.dependencies.kafka.username
+    - kind: Secret
+      name: my-super-secret-data
+      valuesKey: password
+      targetPath: connect.dependencies.kafka.password
     - kind: Secret
       name: my-super-secret-data
       valuesKey: password
