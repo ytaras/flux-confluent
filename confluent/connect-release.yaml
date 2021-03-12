@@ -19,8 +19,6 @@ spec:
     global:
       sasl:
         plain:
-          # username: test_updates
-          # password: test_password1
     connect:
       replicas: 1
       enabled: true
@@ -38,7 +36,6 @@ spec:
       valuesKey: username
       targetPath: global.sasl.plain.username
       optional: false
-      # targetPath: connect.dependencies.kafka.bootstrapEndpoint
     - kind: Secret
       name: my-super-secret-data
       valuesKey: password
