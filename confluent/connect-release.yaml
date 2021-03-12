@@ -19,6 +19,7 @@ spec:
     global:
       sasl:
         plain:
+          key: value
     connect:
       replicas: 1
       enabled: true
