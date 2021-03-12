@@ -7,7 +7,7 @@ metadata:
 spec:
   chart:
     spec:
-      chart: prometheus-community/prometheus
+      chart: ./charts/prometheus
       sourceRef:
         kind: GitRepository
         name: prometheus-helm
