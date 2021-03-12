@@ -19,8 +19,8 @@ spec:
     global:
       sasl:
         plain:
-          username: test_updates
-          password: test_password
+          # username: test_updates
+          # password: test_password1
     connect:
       replicas: 1
       enabled: true
@@ -36,20 +36,13 @@ spec:
     - kind: Secret
       name: my-super-secret-data
       valuesKey: username
-      # targetPath: global.sasl.plain.username
-      targetPath: connect.dependencies.kafka.bootstrapEndpoint
-    - kind: Secret
-      name: my-super-secret-data
-      valuesKey: username
-      targetPath: connect.dependencies.kafka.username
+      targetPath: global.sasl.plain.username
+      optional: false
+      # targetPath: connect.dependencies.kafka.bootstrapEndpoint
     - kind: Secret
       name: my-super-secret-data
       valuesKey: password
-      targetPath: connect.dependencies.kafka.password
-    - kind: Secret
-      name: my-super-secret-data
-      valuesKey: password
-      targetPath: values.global.sasl.plain.password
+      targetPath: global.sasl.plain.password
       optional: false
   dependsOn:
     - name: confluent-operator
